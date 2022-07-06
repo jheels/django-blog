@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
-<body>
-    <p>Hi atiqa!</p>
-</body>
+    <head>
+        <title>jheel blog</title>
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">jheel blog</a></h1>
+        </header>
+        {% for post in posts %}
+            <article>
+                <time>published: {{ post.published_date }}</time>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </article>
+        {% endfor %}
+    </body>
 </html>
